@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import { useStateValue } from "./StateProvider";
+import React from 'react';
+import styled from 'styled-components';
+import { useStateValue } from './StateProvider';
 
 const Product = ({ id, title, price, rating, image }) => {
   const [{}, dispatch] = useStateValue();
 
   const addToBasket = () => {
     dispatch({
-      type: "ADD_TO_BASKET",
+      type: 'ADD_TO_BASKET',
       item: {
         id,
         title,
@@ -21,8 +21,8 @@ const Product = ({ id, title, price, rating, image }) => {
   return (
     <Products>
       <ProductInfo>
-        <p className="title">{title}</p>
-        <p className="price">
+        <p className='title'>{title}</p>
+        <p className='price'>
           <small>$</small>
           <strong>{price}</strong>
         </p>
@@ -30,7 +30,7 @@ const Product = ({ id, title, price, rating, image }) => {
           {Array(rating)
             .fill()
             .map((_) => (
-              <p>M</p>
+              <p>🌟</p>
             ))}
         </Rating>
       </ProductInfo>

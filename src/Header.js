@@ -1,53 +1,52 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import SearchIcon from "@mui/icons-material/Search";
-import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
-import { useStateValue } from "./StateProvider";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import SearchIcon from '@mui/icons-material/Search';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import { useStateValue } from './StateProvider';
 
 const Header = () => {
   const [{ basket }] = useStateValue();
 
   console.log(basket);
   // const [state, dispatch ] = useStateValue() like this
-
   return (
     <Navbar>
-      <Link to="/">
+      <Link to='/'>
         <Logo
-          src="https://pngimg.com/uploads/amazon/amazon_PNG25.png"
-          alt="Amazon"
+          src='https://pngimg.com/uploads/amazon/amazon_PNG25.png'
+          alt='Amazon'
         />
       </Link>
 
       <InputBar>
-        <Input type="text" placeholder="Search Your Item..." />
+        <Input type='text' placeholder='Search Your Item...' />
         <Icon />
       </InputBar>
 
       <MenuBar>
-        <Link className="headerLink" to="/login">
+        <Link className='headerLink' to='/login'>
           <MenuLists>
             <span>Hello Marudhu</span>
             <span>SignIn</span>
           </MenuLists>
         </Link>
 
-        <Link className="headerLink" to="/login">
+        <Link className='headerLink' to='/login'>
           <MenuLists>
             <span>& Returns</span>
             <span>Order</span>
           </MenuLists>
         </Link>
 
-        <Link className="headerLink" to="/login">
+        <Link className='headerLink' to='/login'>
           <MenuLists>
             <span>Your</span>
             <span>Prime</span>
           </MenuLists>
         </Link>
 
-        <Link className="headerLink" to="/checkout">
+        <Link className='headerLink' to='/checkout'>
           <BasketIcon>
             <Basket />
             <span>{basket?.length}</span>
