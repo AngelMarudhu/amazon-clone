@@ -1,3 +1,4 @@
+// initial value of your state
 export const initialState = {
   basket: [
     // {
@@ -25,12 +26,12 @@ export const getBasketTotal = (basket) =>
 
 function reducer(state, action) {
   switch (action.type) {
-    case "ADD_TO_BASKET":
+    case 'ADD_TO_BASKET':
       return { ...state, basket: [...state.basket, action.item] };
 
     //...state.basket meaning whatever inside of array + action.item to push this state
 
-    case "REMOVE_FROM_BASKET":
+    case 'REMOVE_FROM_BASKET':
       // your balance checkout items
       let newBasket = [...state.basket];
 

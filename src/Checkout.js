@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { useStateValue } from "./StateProvider";
-import CheckoutProduct from "./CheckoutProduct";
-import Subtotal from "./Subtotal";
+import React from 'react';
+import styled from 'styled-components';
+import { useStateValue } from './StateProvider';
+import CheckoutProduct from './CheckoutProduct';
+import Subtotal from './Subtotal';
 
 const Checkout = () => {
   const [{ basket }] = useStateValue();
@@ -11,8 +11,8 @@ const Checkout = () => {
     <Checkouts>
       <CheckOutRight>
         <Advertisement
-          src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/AmazonPay/Venku/5_01.jpg"
-          alt="Add"
+          src='https://images-eu.ssl-images-amazon.com/images/G/31/img17/AmazonPay/Venku/5_01.jpg'
+          alt='Add'
         />
 
         {basket?.length === 0 ? (
